@@ -1,5 +1,6 @@
-import React, { useState } from "react";
 import { useQueryClient, useQuery } from "react-query";
+import React, { useState } from "react";
+import Router from "next/router";
 import axios from "axios";
 
 import Layout from "@/components/Layout";
@@ -22,7 +23,6 @@ const Home = () => {
   };
 
   const {
-    data: users,
     data,
     isLoading,
   } = useQuery(["users", page], () => getUsers(page), {
@@ -56,6 +56,21 @@ const Home = () => {
       );
     }
   };
+
+  function getDetail(user, id) {
+    Router.push({
+      pathname: `/detail/${id}`,
+      query: {
+        first_name: user.first_name,
+        last_name: user.last_name,
+        id: user.id,
+        email: user.email,
+        avatar: user.avatar,
+        liked: user.liked,
+        disliked: user.disliked,
+      },
+    });
+  }
 
   const handlePreviousPage = () => setPage((prev) => Math.max(prev - 1, 1));
   const handleNextPage = () => setPage((prev) => prev + 1);
@@ -94,6 +109,7 @@ const Home = () => {
             colorDislike={
               user.disliked === true ? "text-red-500" : "text-black"
             }
+            onclikDetail={() => getDetail(user, user.id)}
           />
         ))}
       </div>
