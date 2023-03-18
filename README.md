@@ -1,15 +1,54 @@
+<h1 align="center">ReqRes User App</h1>
+
+## Deployment
+
+Vercel: https://test-biantarajaya-nextjs.vercel.app/
+
+## Feature
+
+- Login / Logout
+- login with cookies
+- homepage with pagination 4 user
+- detail page user
+- like/unlike user
+- can see user list without login
+- responsive
+
+## Built With
+
+- [ReactJs](https://reactjs.org/)
+- [NextJS](https://nextjs.org/)
+- [TailwindCSS](https://tailwindcss.com/)
+- [DaisyUI](https://daisyui.com/)
+- [Axios](https://axios-http.com/)
+- [React-Cookie](https://www.npmjs.com/package/react-cookie)
+- [React-Query](https://www.npmjs.com/package/react-query)
+- [React-Icons](https://react-icons.github.io/)
+- [Sweetalert2](https://sweetalert2.github.io/)
+- [Vercel](https://vercel.com/)
+
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
 
-First, run the development server:
+1. Clone repo:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+```sh
+   git clone https://github.com/aryoyudhanto/test-biantarajaya-nextjs
+```
+
+2. Install package
+
+```sh
+   npm install
+```
+
+3. Run development server
+
+```sh
+   npm run dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
@@ -36,3 +75,7 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+## Author
+
+- Aryo Yudhanto <br> [![GitHub](https://img.shields.io/badge/Yudha-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/aryoyudhanto)
