@@ -1,6 +1,7 @@
 import { useCookies } from "react-cookie";
 import { useRouter } from "next/router";
 import Swal from "sweetalert2";
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
@@ -46,14 +47,24 @@ const Navbar = () => {
       <div className="flex-none mr-0 md:mr-5">
         <ul className="menu menu-horizontal p-0">
           <li className="text-black font-semibold  ">
-            <Link href="/home" className="active:bg-gray-500 text-sm md:text-base">Home</Link>
+            <Link
+              href="/home"
+              className="active:bg-gray-500 text-sm md:text-base"
+            >
+              Home
+            </Link>
           </li>
         </ul>
       </div>
       <div className="dropdown dropdown-end mr-5 md:mr-10 ">
         <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
           <div className="w-10 rounded-full">
-            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" />
+            <Image
+              src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
+              alt="logo-navbar"
+              width={20}
+              height={20}
+            />
           </div>
         </label>
         <ul
