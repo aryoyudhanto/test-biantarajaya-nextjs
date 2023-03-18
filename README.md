@@ -26,6 +26,7 @@ Vercel: https://test-biantarajaya-nextjs.vercel.app/
 - [React-Icons](https://react-icons.github.io/)
 - [Sweetalert2](https://sweetalert2.github.io/)
 - [Vercel](https://vercel.com/)
+- [ReqRes.in](https://reqres.in/)
 
 
 
