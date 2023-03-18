@@ -2,7 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ['reqres.in', 'cdn-icons-png.flaticon.com']
+    domains: ['reqres.in', 'cdn-icons-png.flaticon.com', 'upload.wikimedia.org', 'img.freepik.com']
   }
 }
 

@@ -36,10 +36,11 @@ const Navbar = () => {
   return (
     <div className="navbar bg-white shadow-md sticky top-0 z-50">
       <div className="flex-1 ml-5 md:ml-10">
-        <img
+        <Image
           src={
             "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Nextjs-logo.svg/800px-Nextjs-logo.svg.png"
           }
+          alt="logo"
           width={50}
           height={50}
         />
