@@ -1,5 +1,6 @@
 import { useQueryClient, useQuery } from "react-query";
 import React, { useState } from "react";
+import Head from "next/head";
 import Router from "next/router";
 import axios from "axios";
 
@@ -90,6 +91,9 @@ const Home = () => {
 
   return (
     <Layout>
+      <Head>
+        <title>Home - ReqRes User App</title>
+      </Head>
       <Navbar />
       <div className="mx-5 mt-10 md:mx-14 md:mt-14">
         <p className="text-xl font-semibold text-black capitalize">user list</p>

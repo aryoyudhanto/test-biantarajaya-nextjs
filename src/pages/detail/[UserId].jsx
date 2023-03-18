@@ -2,6 +2,7 @@ import { useCookies } from "react-cookie";
 import { useRouter } from "next/router";
 import Router from "next/router";
 import Image from "next/image";
+import Head from "next/head";
 import React from "react";
 
 import Layout from "@/components/Layout";
@@ -13,6 +14,9 @@ const Detail = () => {
 
   return (
     <Layout>
+        <Head>
+        <title>Detail - ReqRes User App</title>
+      </Head>
       <Navbar />
       <p className="text-xl font-semibold text-black mx-5 md:mx-14 mt-14 mb-5">
         Detail User

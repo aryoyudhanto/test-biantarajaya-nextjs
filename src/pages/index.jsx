@@ -2,6 +2,7 @@ import { useCookies } from "react-cookie";
 import React, { useState } from "react";
 import { useRouter } from "next/router";
 import Swal from "sweetalert2";
+import Head from "next/head";
 import Link from "next/link";
 import axios from "axios";
 
@@ -58,6 +59,9 @@ const index = () => {
 
   return (
     <Layout>
+      <Head>
+        <title>Login - ReqRes User App</title>
+      </Head>
       <div className="w-full flex justify-center items-center px-5 md:px-16 py-8">
         <section className="w-1/2 hidden xl:flex">
           <img
