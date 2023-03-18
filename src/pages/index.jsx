@@ -1,6 +1,7 @@
 import { useCookies } from "react-cookie";
 import React, { useState } from "react";
 import { useRouter } from "next/router";
+import Swal from "sweetalert2";
 import Link from "next/link";
 import axios from "axios";
 
@@ -33,11 +34,25 @@ const index = () => {
       })
       .then((res) => {
         const { token } = res.data;
+        Swal.fire({
+          position: "center",
+          icon: "success",
+          text: "Login success",
+          showConfirmButton: false,
+          timer: 2000,
+        });
         setCookie("token", token);
         router.push("/home");
       })
       .catch((err) => {
-        console.log(err);
+        const { data } = err.response;
+        const {error} = data
+        Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: error+", try again!",
+          showConfirmButton: true,
+        });
       });
   }
 
@@ -65,7 +80,7 @@ const index = () => {
                 id="input-email"
                 inputSet="text-black"
                 placeholder="youremail@email.com"
-                type="text"
+                type="email"
                 onChange={(e) => setEmail(e.target.value)}
               />
               <CustomInput
