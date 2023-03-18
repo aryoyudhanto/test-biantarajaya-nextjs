@@ -34,23 +34,23 @@ const Navbar = () => {
   }
   return (
     <div className="navbar bg-white shadow-md sticky top-0 z-50">
-      <div className="flex-1 ml-10">
+      <div className="flex-1 ml-5 md:ml-10">
         <img
           src={
             "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Nextjs-logo.svg/800px-Nextjs-logo.svg.png"
           }
-          width={70}
-          height={70}
+          width={50}
+          height={50}
         />
       </div>
-      <div className="flex-none mr-5">
+      <div className="flex-none mr-0 md:mr-5">
         <ul className="menu menu-horizontal p-0">
           <li className="text-black font-semibold  ">
-            <Link href="/home" className="active:bg-gray-500">Home</Link>
+            <Link href="/home" className="active:bg-gray-500 text-sm md:text-base">Home</Link>
           </li>
         </ul>
       </div>
-      <div className="dropdown dropdown-end mr-10 ">
+      <div className="dropdown dropdown-end mr-5 md:mr-10 ">
         <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
           <div className="w-10 rounded-full">
             <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" />

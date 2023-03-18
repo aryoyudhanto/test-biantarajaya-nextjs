@@ -46,11 +46,11 @@ const index = () => {
       })
       .catch((err) => {
         const { data } = err.response;
-        const {error} = data
+        const { error } = data;
         Swal.fire({
           icon: "error",
           title: "Oops...",
-          text: error+", try again!",
+          text: error + ", try again!",
           showConfirmButton: true,
         });
       });

@@ -22,10 +22,7 @@ const Home = () => {
     }));
   };
 
-  const {
-    data,
-    isLoading,
-  } = useQuery(["users", page], () => getUsers(page), {
+  const { data, isLoading } = useQuery(["users", page], () => getUsers(page), {
     refetchOnWindowFocus: false,
   });
 
@@ -94,10 +91,10 @@ const Home = () => {
   return (
     <Layout>
       <Navbar />
-      <div className="mx-14 mt-14">
+      <div className="mx-5 mt-10 md:mx-14 md:mt-14">
         <p className="text-xl font-semibold text-black capitalize">user list</p>
       </div>
-      <div className="m-14 grid grid-rows-4 grid-flow-col gap-2">
+      <div className="mx-5 mt-10 md:m-14 grid grid-rows-4 grid-flow-col gap-2">
         {data.slice(0, 4).map((user) => (
           <Card
             key={user.id}

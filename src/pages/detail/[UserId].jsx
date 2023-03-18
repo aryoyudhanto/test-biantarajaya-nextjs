@@ -10,7 +10,7 @@ import Navbar from "@/components/Navbar";
 const Detail = () => {
   const [cookie, setCookie] = useCookies();
   const router = useRouter();
-  
+
   return (
     <Layout>
       <Navbar />
@@ -46,7 +46,7 @@ const Detail = () => {
                 <span className="font-normal">{router.query?.email}</span>
               </p>
               <button
-                className="my-5 md:mb-0 btn w-1/2 md:w-1/4 capitalize bg-white border-none text-black text-lg md:text-xl hover:scale-105 hover:bg-[#f5f5f5]"
+                className="my-5 md:mb-0 btn w-1/2 md:w-1/4 capitalize bg-white border-none text-black text-lg md:text-xl transition hover:scale-105 hover:bg-[#f5f5f5]"
                 onClick={() => Router.back()}
               >
                 Back
