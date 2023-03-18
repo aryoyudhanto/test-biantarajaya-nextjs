@@ -1,7 +1,8 @@
-import { useRouter } from "next/router";
-import React from "react";
 import { useCookies } from "react-cookie";
+import { useRouter } from "next/router";
 import Swal from "sweetalert2";
+import Link from "next/link";
+import React from "react";
 
 const Navbar = () => {
   const [cookie, setCookie, removeCookie] = useCookies();
@@ -44,8 +45,8 @@ const Navbar = () => {
       </div>
       <div className="flex-none mr-5">
         <ul className="menu menu-horizontal p-0">
-          <li className="text-black font-semibold">
-            <a>Home</a>
+          <li className="text-black font-semibold  ">
+            <Link href="/home" className="active:bg-gray-500">Home</Link>
           </li>
         </ul>
       </div>
@@ -61,9 +62,16 @@ const Navbar = () => {
         >
           <li className="text-black">
             {cookie.token ? (
-              <p className="active:bg-gray-500" onClick={() => onLogout()}>Logout</p>
+              <p className="active:bg-gray-500" onClick={() => onLogout()}>
+                Logout
+              </p>
             ) : (
-              <p className="active:bg-gray-500" onClick={()=>router.push('/')}>Login</p>
+              <p
+                className="active:bg-gray-500"
+                onClick={() => router.push("/")}
+              >
+                Login
+              </p>
             )}
           </li>
         </ul>
